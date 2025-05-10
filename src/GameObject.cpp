@@ -46,7 +46,7 @@ string GameObject::leftAlignText(const string &text, int prefixSpaces, int width
 }
 
 void GameObject::loadLeaderboard(){
-    ifstream file("leaderboard.txt");
+    ifstream file("assets/leaderboard.txt");
     string line;
     while(getline(file,line)){
         stringstream ss(line);

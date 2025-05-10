@@ -15,7 +15,7 @@ int main(){
         Status = game.GameStart(player1,player2,gameobject,menu);
         if(!Status)break;
     }
-    ofstream file("leaderboard.txt");
+    ofstream file("assets/leaderboard.txt");
     for (auto &entry : leaderboard) {
         file << entry.playerName << " " << entry.score << " " << entry.time << "\n";
     }

@@ -1,7 +1,7 @@
 #include "Menu.h"
 
 void Menu::initial_animation(){
-    ifstream inputfile1(".//animation.txt");
+    ifstream inputfile1("assets/animation.txt");
     for(int i = 0;i <= 58;i++){
         string temp;
         getline(inputfile1,temp);
