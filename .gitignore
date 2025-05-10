@@ -1,0 +1,48 @@
+# Compiled Object files
+*.o
+*.obj
+*.slo
+*.lo
+*.dylib
+*.a
+*.so
+*.dll
+*.lib
+
+# Compiled Executables
+*.exe
+*.out
+*.app
+CrazyArcade # 你的執行檔名稱，確保和編譯出來的一致
+
+# Debug files
+*.gdb
+*.pdb
+
+# IDE / Editor specific
+.vscode/
+*.suo
+*.user
+*.aps
+*.ncb
+*.sln
+*.sdf
+*.opensdf
+
+# Build system specific (if you use CMake, etc. - adjust as needed)
+build/
+cmake-build-debug/
+cmake-build-release/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
