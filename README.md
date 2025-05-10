@@ -1,5 +1,7 @@
 # 瘋狂炸彈人 (Crazy Arcade) 🎮
 
+[GitHub Repository](https://github.com/peienwu1216/CrazyArcade)
+
 歡迎來到《瘋狂炸彈人》！這是一款基於經典炸彈人玩法的 C++ 遊戲專案。玩家可以在精心設計的地圖中與 AI 控制的對手或另一位玩家展開刺激的炸彈對決，收集強力道具，爭取最終的勝利。本專案為國立陽明交通大學計算機概論與程式設計的期末專題。
 
 ## 專案特色 ✨
@@ -17,16 +19,22 @@
 
 ## 目錄 📖
 
-* [系統需求](#系統需求-system-requirements)
-* [檔案結構](#檔案結構-file-structure)
-* [編譯與執行](#編譯與執行-compilation-and-execution)
-* [遊戲操作](#遊戲操作-controls)
-* [遊戲機制與道具](#遊戲機制與道具-game-mechanics--items)
-* [AI 行為詳解](#ai-行為詳解-ai-behavior)
-* [開發團隊](#開發團隊-developers)
-* [開發歷程與致謝](#開發歷程與致謝-development-process--acknowledgements)
-* [未來展望](#未來展望-future-work)
-* [授權條款](#授權條款-license)
+- [瘋狂炸彈人 (Crazy Arcade) 🎮](#瘋狂炸彈人-crazy-arcade-)
+  - [專案特色 ✨](#專案特色-)
+  - [目錄 📖](#目錄-)
+  - [系統需求 (System Requirements) 💻](#系統需求-system-requirements-)
+  - [檔案結構 (File Structure) 📂](#檔案結構-file-structure-)
+  - [編譯與執行 (Compilation and Execution) 🚀](#編譯與執行-compilation-and-execution-)
+  - [遊戲操作 (Controls) 🕹️](#遊戲操作-controls-️)
+  - [遊戲機制與道具 (Game Mechanics \& Items) 💣💥](#遊戲機制與道具-game-mechanics--items-)
+    - [選單選項 (Menu Options)](#選單選項-menu-options)
+    - [道具說明 (Item Descriptions)](#道具說明-item-descriptions)
+    - [計分與勝利條件 (Scoring and Victory)](#計分與勝利條件-scoring-and-victory)
+  - [AI 行為詳解 (AI Behavior) 🧠](#ai-行為詳解-ai-behavior-)
+  - [開發團隊 (Developers) 🧑‍💻](#開發團隊-developers-)
+  - [開發歷程與致謝 (Development Process \& Acknowledgements) 🙏](#開發歷程與致謝-development-process--acknowledgements-)
+  - [未來展望 (Future Work) 🚀](#未來展望-future-work-)
+  - [授權條款 (License) 📄](#授權條款-license-)
 
 ## 系統需求 (System Requirements) 💻
 
@@ -37,6 +45,8 @@
 ## 檔案結構 (File Structure) 📂
 
 以下為本專案的目錄結構：
+
+```text
 CrazyArcade/
 ├── .git/                   # Git 版本控制系統目錄 (自動生成)
 ├── .gitignore              # 指定 Git 忽略追蹤的檔案與目錄
@@ -59,6 +69,7 @@ CrazyArcade/
 │   └── CrazyArcade_Final_Report.pdf # 詳細的期末專題報告
 ├── README.md               # 即本檔案，專案的主要說明文件
 └── LICENSE                 # 專案的開源許可證文件
+```
 
 詳細的專案設計與實作細節，請參閱 [`docs/CrazyArcade_Final_Report.pdf`](./docs/CrazyArcade_Final_Report.pdf)。
 
@@ -69,7 +80,7 @@ CrazyArcade/
 1.  **取得專案：**
     * 若您尚未取得專案，請先 Clone 本倉庫：
         ```bash
-        git clone [貼上你 GitHub 倉庫的 HTTPS 或 SSH URL]
+        git clone https://github.com/peienwu1216/CrazyArcade.git
         ```
     * 進入專案根目錄：
         ```bash
@@ -77,17 +88,22 @@ CrazyArcade/
         ```
 
 2.  **編譯原始碼：**
-    本專案使用 g++ 進行編譯。請在專案的**根目錄**下執行以下指令：
+    本專案提供了 Makefile 以簡化編譯流程。請在專案的**根目錄**下執行以下指令：
     ```bash
-    g++ -std=c++14 -o CrazyArcade src/main.cpp src/GameObject.cpp src/Globals.cpp src/GameCrazyArcade.cpp src/Menu.cpp src/AIController.cpp -Isrc
+    make
     ```
-    * `-std=c++14`：指定使用 C++14 標準。
-    * `-o CrazyArcade`：指定輸出的執行檔名稱為 `CrazyArcade`。
-    * `src/*.cpp`：將 `src` 目錄下所有相關的 `.cpp` 檔案加入編譯 (在此已明確列出)。
-    * `-Isrc`：告知編譯器在 `src` 目錄下尋找標頭檔 (`.h` files)。
+    或者，若要包含所有編譯警告：
+    ```bash
+    make all
+    ```
+    這將使用 `g++` 和 C++14 標準進行編譯，並在根目錄生成名為 `CrazyArcade` 的執行檔。
 
 3.  **執行遊戲：**
-    編譯成功後，會在專案根目錄下產生名為 `CrazyArcade` 的執行檔。
+    編譯成功後，可使用以下指令執行遊戲：
+    ```bash
+    make run
+    ```
+    或者直接執行：
     * 在 Linux / macOS 上執行：
         ```bash
         ./CrazyArcade
@@ -97,6 +113,11 @@ CrazyArcade/
         CrazyArcade.exe
         ```
     遊戲啟動後，您將看到主選單。
+
+若需要清理編譯產生的檔案，可以執行：
+```bash
+make clean
+```
 
 ## 遊戲操作 (Controls) 🕹️
 
@@ -134,10 +155,10 @@ CrazyArcade/
 
 ### 道具說明 (Item Descriptions)
 在地圖中破壞可摧毀的障礙物後，有機會出現以下道具：
-* **綠色星星 ★:** 增加玩家分數 +50分。
-* **紅色愛心 ♥:** 增加玩家生命值 +20點 (或 +1 條命，請依你的實際設計填寫)。
-* **黑桃 ♠:** 玩家可同時放置的炸彈數量上限 +1 (獲得分數 +20分)。
-* **黑色齒輪符號 ❁:** 炸彈爆炸範圍 +1 格 (獲得分數 +20分)。
+* **綠色星星 ★:** 增加玩家分數 +50 分。
+* **紅色愛心 ♥:** 增加玩家生命值 +1 條命，以及獲得分數 +20分。
+* **黑桃 ♠:** 玩家可同時放置的炸彈數量上限 +1，以及獲得分數 +20 分。
+* **黑色齒輪符號 ❁:** 炸彈爆炸範圍 +1 格，以及獲得分數 +20分。
 
 ### 計分與勝利條件 (Scoring and Victory)
 * **擊敗對手:** +100 分。
@@ -155,7 +176,7 @@ CrazyArcade/
 * **`WAIT_EXPLOSION` (等待爆炸):**
     * **觸發條件:** AI 剛放置了一顆炸彈。
     * **行為:** 移動到預計的安全位置，等待自己放置的炸彈爆炸。
-* **`Workspace_ITEMS` (拾取道具):**
+* **`Fetch_ITEMS` (拾取道具):**
     * **觸發條件:** 地圖上存在可拾取的道具，且自身未處於直接危險中，也沒有明確的攻擊目標。
     * **行為:** 計算前往最近或最有價值道具的路徑並移動拾取。
 * **`ATTACK_PLAYER` (攻擊玩家):**
