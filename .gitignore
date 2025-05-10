@@ -35,7 +35,6 @@ cmake-build-debug/
 cmake-build-release/
 CMakeCache.txt
 CMakeFiles/
-Makefile
 cmake_install.cmake
 
 # OS generated files
