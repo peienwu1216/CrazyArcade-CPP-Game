@@ -13,7 +13,7 @@
 *.exe
 *.out
 *.app
-CrazyArcade # 你的執行檔名稱，確保和編譯出來的一致
+CrazyArcade
 
 # Debug files
 *.gdb
