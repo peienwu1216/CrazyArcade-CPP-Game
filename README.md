@@ -1,6 +1,18 @@
 # 瘋狂炸彈人 (Crazy Arcade) 🎮
 
-[GitHub Repository](https://github.com/peienwu1216/CrazyArcade)
+> 本專案 (`CrazyArcade-CPP-Game`) 是我在大一上學期「計算機概論」課程中，對OOP遊戲邏輯的初次探索，它為我奠定了重要的基礎。
+>
+> 在完成此專案後，我將從中學到的經驗與反思，在大一下的物件導向程式設計課程中，投入到一個**技術更深入、工程實踐更完善**的後續專案 **`Pycade Bomber`** 中。該專案在原有的基礎上進行了全面升級：
+>
+> * **技術棧升級**: 從純 C++ 控制台，升級為使用 **Python** 與 **Pygame** 函式庫，實現了更豐富的圖形化介面。
+> * **AI 演算法強化**: AI 的路徑規劃演算法從 BFS 升級為 **A***，並設計了四種不同行為模式的 **Finite State Machine (FSM)**。
+> * **導入現代軟體工程實踐**: 建立了完整的 **CI/CD (持續整合/持續部署)** 流程，透過 **GitHub Actions** 進行自動化測試 (Pytest) 與部署。
+> * **線上遊玩**: 專案會自動部署到 **GitHub Pages**，您可以**直接在線上體驗最新版本**的遊戲。
+>
+> **因此，強烈建議優先瀏覽我更成熟的 `Pycade Bomber` 專案，以更全面地了解我的技術成長與工程能力。**
+>
+> * 🔗 [**前往更完善的 `Pycade Bomber` 專案 (Python/Pygame)**](https://github.com/peienwu1216/oop-2025-proj-pycade)
+> * 📝 [**閱讀我為此專案撰寫的詳細開發歷程與技術剖析文章**](https://peienwu-blog-next.vercel.app/pycade-bomber-ai-and-cicd)
 
 歡迎來到《瘋狂炸彈人》！這是一款基於經典炸彈人玩法的 C++ 遊戲專案。玩家可以在精心設計的地圖中與 AI 控制的對手或另一位玩家展開刺激的炸彈對決，收集強力道具，爭取最終的勝利。本專案為國立陽明交通大學計算機概論與程式設計的期末專題。
 
